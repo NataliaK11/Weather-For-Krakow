@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<center>
+    <form style="width: 70%" action="/weather/krakow" method="post">
+        <h2>Check weather for Krakow!!</h2>
+        <h4>Enter dates to check average temperature:</h4>
+        <br/>
+
+
+        <div class="form-group">
+
+            <input  name="startDate" type="date" placeholder="Data początkowa">
+
+            <input name="endDate" type="date" placeholder="Data końcowa">
+
+            <button type="submit" class="btn btn-primary">Sprawdź</button>
+        </div>
+
+        <div th:if="${average}" th:text="${average}">
+        </div>
+    </form>
+</center>
+</body>
+</html>
